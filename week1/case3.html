@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ternary If Else</title>
+</head>
+<body>
+    <script>
+        let jawab = prompt("Kamu Beruntung! Silahkan pilih hadiahmu dengan memasukkan angka 1 sampai 5");
+        
+        let hadiah = jawab === "1" 
+        ? "Tisu" 
+        : jawab === "2" 
+        ? "1 Kotak Kopi" 
+        : jawab === "3" 
+        ? "Gulaku" 
+        : jawab === "4" 
+        ? "Permen Kopi" 
+        : jawab === "5" 
+        ? "Antimo 1 Pack" 
+        : document.write("<p>Oppss! ngga ada pilihannya tau</p>");
+
+        var prize = (jawab === "" || jawab > 5) ? document.write("<p>Kamu ngga jadi dapet hadiah yaaa...</p>") :
+            document.write(`<h2>Selamat Kamu mendapatkan ${hadiah} </h2>`);
+    </script>
+</body>
+</html>
