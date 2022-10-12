@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- (X) COSMETICS - DOES NOT MATTER -->
+    <title>Javascript Array To Table</title>
+    <style>
+    html, body { font-family: arial, sans-serif; }
+    table { border-collapse: collapse; }
+    table tr td {
+      border: 1px solid #000;
+      padding: 10px;
+    }
+    table tr:nth-child(odd) { background: #f4f4f4; }
+    </style>
+  </head>
+  <body>
+    <!-- (A) ALL WE NEED IS A <DIV> CONTAINER -->
+    <div id="container"></div>
+
+    <script>
+    // (B) ARRAY OF DATA
+    var data = ["doge", "cate", "birb", "doggo", "moon moon", "awkward seal"];
+
+    // (C) CREATE HTML TABLE
+    // (C1) HTML TABLE STRING
+    var myTable = "<table><tr>";
+
+    // (C2) LOOP THROUGH ARRAY & GENERATE ROWS-CELLS
+    var perrow = 2; // 2 CELLS PER ROW
+    data.forEach((value, i) => {
+      // "NORMAL" CELL
+      myTable += `<td>${value}</td>`;
+
+      // CLICK ON CELL TO DO SOMETHING
+      // myTable += `<td onclick="FUNCTION()">${value}</td>`;
+
+      // TO PASS IN A RUNNING NUMBER OR PARAMETER
+      // myTable += `<td onclick="FUNCTION(${i})">${value}</td>`;
+
+      // BREAK INTO NEXT ROW
+      var next = i + 1;
+      if (next%perrow==0 && next!=data.length) { myTable += "</tr><tr>"; }
+    });
+
+    // (C3) CLOSE THE TABLE STRING
+    myTable += "</tr></table>";
+
+    // (D) ATTACH HTML TO CONTAINER
+    document.getElementById("container").innerHTML = myTable;
+    </script>
+  </body>
+</html>

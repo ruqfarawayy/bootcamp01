@@ -29,7 +29,7 @@ console.log(buah);
 buah.unshift("Rambutan");
 console.log(buah);
 
-//splice = sebuah method untuk menambahkan elemen 
+//splice = sebuah method untuk menambahkan elemen dan menghapus elemen
 buah.splice(2,0, "Kurma", "Zakar")
 console.log(buah);
 // 2 adalah index posisi dimana elemen akan di tambahkan
@@ -37,8 +37,9 @@ console.log(buah);
 // "Kurma", "Zakar" adalah elemen baru yang akan ditambahkan 
 
 //slice = sebuah method untuk memotong array dijadikan baris array baru
-sayur.slice(2);
-console.log(sayur);
+console.log(sayur)
+let sayur2 = sayur.slice(0,2);
+console.log(sayur2);
 
 
 

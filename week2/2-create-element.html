@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- (X) COSMETICS - DOES NOT MATTER -->
+    <title>Javascript Array To Table</title>
+    <style>
+    html, body { font-family: arial, sans-serif; }
+    table { border-collapse: collapse; }
+    table tr td {
+      border: 1px solid #000;
+      padding: 10px;
+    }
+    table tr:nth-child(odd) { background: #f4f4f4; }
+    </style>
+  </head>
+  <body>
+    <!-- (A) ALL WE NEED IS A <DIV> CONTAINER -->
+    <div id="container"></div>
+
+    <script>
+    // (B) ARRAY OF DATA
+    var data = ["doge", "cate", "birb", "doggo", "moon moon", "awkward seal"];
+
+    // (C) CREATE HTML TABLE
+    // (C1) HTML TABLE ELEMENT
+    var myTable = document.createElement("table"),
+        row = myTable.insertRow(), cell;
+
+    // (C2) LOOP THROUGH ARRAY & GENERATE ROWS-CELLS
+    var perrow = 2; // 2 CELLS PER ROW
+    data.forEach((value, i) => {
+      // ADD CELL
+      cell = row.insertCell();
+      cell.innerHTML = value;
+
+      // CLICK ON CELL TO DO SOMETHING
+      // cell.onclick = FUNCTION;
+
+      // TO PASS IN A RUNNING NUMBER OR PARAMETER
+      // cell.onclick = () => { console.log(i); };
+
+      // BREAK INTO NEXT ROW
+      var next = i + 1;
+      if (next%perrow==0 && next!=data.length) { row = myTable.insertRow(); }
+    });
+
+    // (D) ATTACH TABLE TO CONTAINER
+    document.getElementById("container").appendChild(myTable);
+    </script>
+  </body>
+</html>
