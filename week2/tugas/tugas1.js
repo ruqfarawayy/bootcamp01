@@ -2,17 +2,17 @@
 // input => buku
 // output => 0
 
-let barang = ["Buku", "Pulpen", "Penggaris"]
+let barang = ["Buku", "Pulpen", "Penggaris"];
 
 function posisi(i) {
     for (let index in barang) {
         if (i == barang[index]){
-            return barang[index];
+            return index;
         }
     }
 }
 
-console.log(posisi("Penggaris"));
+console.log(posisi("Buku"));
 
 
 // kalau di balik beginilah hasilnya
@@ -20,12 +20,12 @@ console.log(posisi("Penggaris"));
 function dimana(i) {
     for (let index in barang) {
         if (i == index){
-            return barang[index] + "=>" + index;
+            return barang[index] + " Indeksnya adalah => " + index;
         }
     }
 }
 
-console.log(posisi(1));
+console.log(dimana(0));
  
 
  

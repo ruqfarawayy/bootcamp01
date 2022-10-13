@@ -10,4 +10,5 @@ function kelipatan(){
     console.log(place);
 };
 
-kelipatan();
+console.log(array);
+
