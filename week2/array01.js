@@ -32,6 +32,7 @@ console.log(buah);
 //splice = sebuah method untuk menambahkan elemen dan menghapus elemen
 buah.splice(2,0, "Kurma", "Zakar")
 console.log(buah);
+
 // 2 adalah index posisi dimana elemen akan di tambahkan
 // 0 adalah elemen yang akan dihapus setelah elemen yang sudah ditambahkan
 // "Kurma", "Zakar" adalah elemen baru yang akan ditambahkan 
@@ -39,8 +40,14 @@ console.log(buah);
 //slice = sebuah method untuk memotong array dijadikan baris array baru
 console.log(sayur)
 let sayur2 = sayur.slice(0,2);
+// 0 adalah letak index yang menjadi awal untuk array baru
+// 2 adalah jumlah data yang akan di masukkan kedalam array baru
 console.log(sayur2);
 
+
+
+buah.splice(2,3);
+console.log(buah);
 
 
 
