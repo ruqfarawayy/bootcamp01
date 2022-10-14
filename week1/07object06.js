@@ -6,7 +6,7 @@ const profile = {
 
 // const {firstName, lastName, age, isMale} = profile;
 
-const {firstName, lastName, age, isMale = false } = profile;
+const {firstName, lastName, age, isMale = true} = profile;
 
 console.log(firstName);
 console.log(lastName);
