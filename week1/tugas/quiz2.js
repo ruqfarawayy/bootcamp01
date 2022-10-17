@@ -11,3 +11,9 @@ function perulangan(x) {
 };
 
 perulangan(x);
+
+const ganjilGenap = x => {
+    if (x == 1) {
+        return 
+    }
+}

@@ -1,10 +1,11 @@
-// let i = 5;
-// let string = "";
+let i = 5;
+let string = "";
 
-// for (let x = 0; x <= i ; x++) {
-//     string += "*"
-//     console.log(string);
-// }
+for (let x = 0; x <= i ; x++) {
+    string += "*"
+    console.log(string);
+}
+
 
 function Greetings() {
     console.log("Hai temen-temen.");

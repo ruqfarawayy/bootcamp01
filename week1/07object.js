@@ -19,3 +19,5 @@ console.log(`Saya seorang ${user['Jenis Kelamin']}`);
 console.log(`Berat saya ${user['berat-badan']} Kg`);
 console.log(`Saya berasal dari ${user['kebangsaan']}`);
 console.log(`Pernah ke semarang? ${user.null}`);
+
+
