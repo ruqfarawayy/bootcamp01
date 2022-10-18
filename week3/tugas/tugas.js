@@ -16,8 +16,7 @@ function totalArr (num) {
 //input : array angka positif
 // output : array angka positif berurutan dari kecil ke besar
 function urutan (arr) {
-    arr.sort(function (a, b) {return a - b});
-   console.log(arr)
+    const urutin = arr.sort(a, b => a - b);
 }
 
 // urutan(bilangan);
