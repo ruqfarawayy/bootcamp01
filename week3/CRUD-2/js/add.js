@@ -1,3 +1,6 @@
+import * as data from "./data";
+import * as tampil from "./tampil";
+
 let btnSimpan = document.getElementById('btn-simpan');
 btnSimpan.addEventListener("click", simpan)
 
@@ -6,15 +9,16 @@ function simpan () {
     let namaInput = document.getElementById('tambahNama');
     let ageInput = document.getElementById('tambahUsia');
 
-    profiles.push({
+    data.profiles.push({
         nik:nikInput.value,
         nama:namaInput.value,
         age: parseInt(ageInput.value),
     });
-    tampilData(profiles);
+
+    tampil.tampilData(data.profiles);
     nikInput.value = '';
     namaInput.value = '';
     ageInput.value = '';
 };
     
-module.exports = { btnSimpan };
+export {btnSimpan};
