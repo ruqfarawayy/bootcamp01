@@ -9,4 +9,4 @@ function getErrorInObject() {
             }
         }
     }   
-
+console.log(getErrorInObject());

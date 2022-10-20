@@ -10,6 +10,18 @@
     <div class="container"> 
         <h1> Data Penduduk </h1>
 
+        <!-- tombol sorting -->
+        <div class="dropdown">
+          <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Sorting
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#" onclick="sortData('asc')">Ascending</a></li>
+            <li><a class="dropdown-item" href="#" onclick="sortData('dsc')">Descending</a></li>
+          </ul>
+        </div>
+
+        <!-- Tabel Daftar -->
         <table class="table">
             <thead>
               <tr>

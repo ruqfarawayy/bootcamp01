@@ -9,17 +9,18 @@ let profiles = [{
     age : 21,
 }];
 
+// JSON.parse(localStorage.getItem('profiles'));
 
-function tampilData() {
+function tampilData(profileData) {
     let tBody = document.getElementById('printData')  
     tBody.innerHTML = "";
     // console.log(tBody);
-    for (let i in profiles) {
-        let nik = profiles[i].nik;
-        let nama = profiles[i].nama;
-        let age = profiles[i].age;
+    for (let i in profileData) {
+        let nik = profileData[i].nik;
+        let nama = profileData[i].nama;
+        let age = profileData[i].age;
         let tRow = `<tr>
-                    <th>${Number(i) + 1}</th>
+                    <th>${parseInt(i) + 1}</th>
                     <td>${nik}</td>
                     <td>${nama}</td>
                     <td>${age}</td>
@@ -60,7 +61,7 @@ function ubahData() {
     profiles[idEdit.value].nik = nikEdit.value;
     profiles[idEdit.value].nama = namaEdit.value;
     profiles[idEdit.value].age = ageEdit.value;
-    tampilData();
+    tampilData(profiles);
 }
 
 function delData(i) {
@@ -79,8 +80,20 @@ function tambahData() {
         nama:namaInput.value,
         age: parseInt(ageInput.value),
     });
-    tampilData();
+    tampilData(profiles);
+    nikInput.value = ''
+    namaInput.value = ''
+    ageInput.value = ''
+}
+const sortArr = (sortType, arr) => sortType === 'asc' ? arr.sort( (a,b) => a.age - b.age) : arr.sort((a,b) => b.age - a.age);
 
+function sortData(order){
+   let sorted = sortArr(order, profiles)
+    tampilData(sorted);
 }
 
-tampilData();
+
+
+tampilData(profiles);
+
+// localStorage.setItem('profiles', JSON.stringify([{nik: 2141312389, nama: "Ganda", age: 34}]));
