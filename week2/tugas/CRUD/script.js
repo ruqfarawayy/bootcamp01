@@ -85,7 +85,7 @@ function tambahData() {
     namaInput.value = ''
     ageInput.value = ''
 }
-const sortArr = (sortType, arr) => sortType === 'asc' ? arr.sort( (a,b) => a.age - b.age) : arr.sort((a,b) => b.age - a.age);
+const sortArr = (sortType, arr) => sortType === 'asc' ? arr.sort( (a,b) => a.nik - b.nik) : arr.sort((a,b) => b.nik - a.nik);
 
 function sortData(order){
    let sorted = sortArr(order, profiles)
