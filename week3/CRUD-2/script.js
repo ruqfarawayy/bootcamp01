@@ -1,4 +1,4 @@
-import * as tambah from "../CRUD-2/js/add";
+import * as tambah from "./js/add.js";
 
 let profiles = [{
     nik: 33022657891,
@@ -12,6 +12,7 @@ let profiles = [{
 }];
 
 // JSON.parse(localStorage.getItem('profiles'));
+
 
 
 function tampilData(profileData) {
@@ -35,6 +36,8 @@ function tampilData(profileData) {
         tBody.innerHTML += tRow;
     };
 }
+
+tambah.btnSimpan;
 
 tampilData(profiles);
 
