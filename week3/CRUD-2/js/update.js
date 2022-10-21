@@ -1,6 +1,6 @@
 const cari = (i) => profiles.find(element => element[i] === i);
 
-function selectData (i) {
+function selectData (i, profiles) {
     // console.log("select data", nik)
     // console.log(cari(nik));
     let nikEdit = document.getElementById('ubahNik');
@@ -16,7 +16,7 @@ function selectData (i) {
 }
 
 
-function ubahData() {
+function ubahData(profiles) {
     let nikEdit = document.getElementById('ubahNik');
     let namaEdit = document.getElementById('ubahNama');
     let ageEdit = document.getElementById('ubahUsia');
@@ -26,7 +26,7 @@ function ubahData() {
     profiles[idEdit.value].nik = nikEdit.value;
     profiles[idEdit.value].nama = namaEdit.value;
     profiles[idEdit.value].age = ageEdit.value;
-    tampilData(profiles);
+    
 }
 
-module.exports = {selectData, ubahData};
+export {selectData, ubahData};
