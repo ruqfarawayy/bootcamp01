@@ -1,0 +1,23 @@
+callback
+promise
+ajax
+async & await
+
+single vs multiline :
+Lingkungan eksekusi task
+
+blocking vs non blocking
+Teknik ngoding (IO related)
+
+synchronus vs asynchronous
+teknik ngoding (HTTP Request related)
+
+concurrent vs parallel
+Lingkungan eksekusi task
+
+asynchronous callback = event loop
+
+callback => function yang dikirimkan sebagai parameter dari function yang lain
+
+function yang di eksekusi setelah function lain selesai dijalankan
+
