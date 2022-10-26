@@ -48,8 +48,8 @@ btn.addEventListener('click', () => {
       // })
   })
   .then(() => {
-      console.log("hihi")
       setTimeout(() => {
+          console.log("hihi")
           third.style.color = "green"
       }, 3000)
   })
