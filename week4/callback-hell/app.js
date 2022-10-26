@@ -33,7 +33,7 @@ btn.addEventListener('click', () => {
   })
   .then(() => {
       // setTimeout(() => {
-          console.log("wkwkkw")
+          console.log("1")
           first.style.color ="red"
       // }, 1000)
       // return new Promise(function (resolve){
@@ -42,17 +42,17 @@ btn.addEventListener('click', () => {
   })
   .then(() => {
       setTimeout(() => {
-          console.log("heha")
+          console.log("2")
           second.style.color =  "blue"
-      }, 2000)
+      }, 1000)
       // return new Promise(function (resolve) {
       //     resolve()
       // })
   })
   .then(() => {
       setTimeout(() => {
-          console.log("hihi")
+          console.log("3")
           third.style.color = "green"
-      }, 3000)
+      }, 1000)
   })
 })
