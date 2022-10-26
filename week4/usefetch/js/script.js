@@ -103,6 +103,4 @@ let sortDesc = document.getElementById('sortDataDesc');
 //     });
 // });
 
-
-
 // localStorage.setItem('profiles', JSON.stringify([{nik: 2141312389, nama: "Ganda", age: 34}]));
