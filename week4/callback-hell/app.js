@@ -27,30 +27,32 @@ const btn = document.querySelector('.btn')
 
 btn.addEventListener('click', () => {
   return new Promise(function (resolve) {
+      setTimeout( () => {
+      }, 1000)
       resolve()
   })
   .then(() => {
-      setTimeout(() => {
+      // setTimeout(() => {
           console.log("wkwkkw")
           first.style.color ="red"
-      }, 1000)
+      // }, 1000)
       // return new Promise(function (resolve){
       //   resolve()  
       // })
   })
   .then(() => {
-      setTimeout(() => {
+      // setTimeout(() => {
           console.log("heha")
           second.style.color =  "blue"
-      }, 2000)
+      // }, 1000)
       // return new Promise(function (resolve) {
       //     resolve()
       // })
   })
   .then(() => {
-      setTimeout(() => {
+      // setTimeout(() => {
           console.log("hihi")
           third.style.color = "green"
-      }, 3000)
+      // }, 1000)
   })
 })
