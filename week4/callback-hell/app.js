@@ -28,8 +28,8 @@ const btn = document.querySelector('.btn')
 btn.addEventListener('click', () => {
   return new Promise(function (resolve) {
       setTimeout( () => {
+        resolve()
       }, 1000)
-      resolve()
   })
   .then(() => {
       // setTimeout(() => {
