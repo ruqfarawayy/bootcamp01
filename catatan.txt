@@ -21,3 +21,14 @@ callback => function yang dikirimkan sebagai parameter dari function yang lain
 
 function yang di eksekusi setelah function lain selesai dijalankan
 
+Promise = object yang merepresentasikan keberhasilan / kegagalan dari sebuah event yang async di masa yang akan datang
+
+Janji (terpenuhi / ingkar)
+
+janji = states (fulfilled / rejected / pending)
+
+callback promise (resolve / reject / finally)
+
+didalam promise selalu ada aksi:
+untuk terpenuhi maka (then)
+bila tidak maka (catch)

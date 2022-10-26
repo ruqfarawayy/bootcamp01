@@ -21,6 +21,36 @@ const btn = document.querySelector('.btn')
 //   }, 1000)
 // })
 
-const promise1 = () => {
-  return new Promise
-}
+// const promise1 = () => {
+//   return new Promise
+// }
+
+btn.addEventListener('click', () => {
+  return new Promise(function (resolve) {
+      resolve()
+  })
+  .then(() => {
+      setTimeout(() => {
+          console.log("wkwkkw")
+          first.style.color ="red"
+      }, 1000)
+      // return new Promise(function (resolve){
+      //   resolve()  
+      // })
+  })
+  .then(() => {
+      setTimeout(() => {
+          console.log("heha")
+          second.style.color =  "blue"
+      }, 2000)
+      // return new Promise(function (resolve) {
+      //     resolve()
+      // })
+  })
+  .then(() => {
+      console.log("hihi")
+      setTimeout(() => {
+          third.style.color = "green"
+      }, 3000)
+  })
+})
