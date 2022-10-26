@@ -41,18 +41,18 @@ btn.addEventListener('click', () => {
       // })
   })
   .then(() => {
-      // setTimeout(() => {
+      setTimeout(() => {
           console.log("heha")
           second.style.color =  "blue"
-      // }, 1000)
+      }, 2000)
       // return new Promise(function (resolve) {
       //     resolve()
       // })
   })
   .then(() => {
-      // setTimeout(() => {
+      setTimeout(() => {
           console.log("hihi")
           third.style.color = "green"
-      // }, 1000)
+      }, 3000)
   })
 })
