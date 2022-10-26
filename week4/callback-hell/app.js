@@ -32,28 +32,29 @@ btn.addEventListener('click', () => {
       }, 1000)
   })
   .then(() => {
-      // setTimeout(() => {
           console.log("1")
           first.style.color ="red"
-      // }, 1000)
-      return new Promise(function (resolve) {
-        setTimeout( () => {
-          resolve()
-        }, 1000)
+      return new Promise(function (resolve){
+        setTimeout(() => {
+        resolve()  
+      }, 1000)
+      })
   })
   .then(() => {
-      setTimeout(() => {
+      
           console.log("2")
           second.style.color =  "blue"
+     
+      return new Promise(function (resolve) {
+        setTimeout(() => {  
+        resolve()
       }, 1000)
-      // return new Promise(function (resolve) {
-      //     resolve()
-      // })
+      })
   })
   .then(() => {
-      setTimeout(() => {
+      // setTimeout(() => {
           console.log("3")
           third.style.color = "green"
-      }, 1000)
+      // }, 1000)
   })
 })
