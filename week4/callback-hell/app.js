@@ -36,9 +36,10 @@ btn.addEventListener('click', () => {
           console.log("1")
           first.style.color ="red"
       // }, 1000)
-      // return new Promise(function (resolve){
-      //   resolve()  
-      // })
+      return new Promise(function (resolve) {
+        setTimeout( () => {
+          resolve()
+        }, 1000)
   })
   .then(() => {
       setTimeout(() => {
