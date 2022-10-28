@@ -32,3 +32,9 @@ callback promise (resolve / reject / finally)
 didalam promise selalu ada aksi:
 untuk terpenuhi maka (then)
 bila tidak maka (catch)
+
+asyncronpus function : "Sebuah function yang bekerja secara asynchronous (melalui event loop), yang menghasilkan (implisit) promise sebagai return value-nya, tapi cara penulisan code-nya menggunakan penulisan yang synchronous(standard)
+
+didalam function async tidak bisa menggunakan .then , didalam async yang digunakan adalah try & catch.
+
+
