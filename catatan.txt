@@ -37,4 +37,41 @@ asyncronpus function : "Sebuah function yang bekerja secara asynchronous (melalu
 
 didalam function async tidak bisa menggunakan .then , didalam async yang digunakan adalah try & catch.
 
+fetch adalah sebuah method pada API javascript untuk mengambil resources dari jaringan, dan mengembalikan promise yang selesai (fullfilled) ketika ada response yang tersedia.
 
+cara nulis fetch(resources,init);
+
+resources :
+- url:alamat dari sumber yang kita akan ambil
+- request object 
+
+init : konfigurasi tambahan pada sebuah request berbentuk object
+ - method
+ - headers
+ - body
+ - mode
+ - cache
+ - referrer
+ - referrerPolicy
+ - integrity
+ - keepalive
+ - signal
+
+response (property)
+ - headers
+ - ok
+ - redirected
+ - status
+ - statusText
+ - type
+ - url
+ - body
+
+response (method)
+ - clone()
+ - error()
+ - redirect()
+ - blob()
+ - formData()
+ - json()
+ - text()

@@ -1,6 +1,13 @@
 //make metode fetch
 
 const searchButton = document.querySelector('.search-button');
+const enterButton = document.querySelector('.input-keyword');
+enterButton.addEventListener('keypress', function(event) {
+  if(event.key === "Enter"){
+    event.preventDefault();
+    searchButton.click();
+  }
+})
 searchButton.addEventListener('click', function () {
     const inputKeyword = document.querySelector('.input-keyword');
     fetch('http://www.omdbapi.com/?apikey=ec047b4d&s=' + inputKeyword.value)
