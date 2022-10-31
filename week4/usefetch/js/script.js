@@ -5,13 +5,11 @@ import * as update from "./update.js";
 import * as warn from "./alert.js";
 import * as tampil from "./tampilData.js"
  
-    async function loadData() {
-        const url = await fetch('http://104.248.154.192:3005/person');
-        const response = await url.json();
-        const userData = response.data;
-        tampil.tampilData(userData)
-    }
-    
+
+
+
+// loadData();
+
 //     .then(response => response.json())
 //     .then(response => {
 //         // console.log(response.data);
@@ -30,8 +28,9 @@ let btnSimpan = document.getElementById('btn-simpan');
 btnSimpan.addEventListener("click", () => {
     try {
     tambah.simpan();
+    tampil.tampilData();
+    console.log('harusnya udah tampil');
     warn.alertWarn("Berhasil Menambahkan", "success");
-    loadData();
     }
     catch(e){
         console.log(e.message);
@@ -113,5 +112,4 @@ let sortDesc = document.getElementById('sortDataDesc');
 // });
 
 // localStorage.setItem('profiles', JSON.stringify([{nik: 2141312389, nama: "Ganda", age: 34}]));
-
-loadData();
+tampil.tampilData();

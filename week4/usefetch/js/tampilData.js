@@ -1,4 +1,8 @@
-function tampilData(profileData) {
+
+async function tampilData() {
+    const url = await fetch('http://104.248.154.192:3005/person');
+    const response = await url.json();
+    let profileData = response.data;
     let tBody = document.getElementById('printData');  
     tBody.innerHTML = "";
     // console.log(tBody);

@@ -26,7 +26,7 @@ function simpan () {
             method: 'POST',
             headers: {
                 'Accept':'application/json',
-                'Content-Type': 'application/json'
+                'Content-Type':'application/json'
             },
             body: JSON.stringify({nik: nikInput, nama: namaInput, alamat: addressInput})
         }
@@ -34,8 +34,8 @@ function simpan () {
         
     const response = await post.json();
     const userData = response.data;
-    tampil.tampilData(userData);
-    })();
+    // tampil.tampilData(userData);
+})();
 };
     
 export {simpan};
