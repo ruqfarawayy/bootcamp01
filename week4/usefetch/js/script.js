@@ -65,9 +65,9 @@ parrentEdit.addEventListener("click", (y) => {
    try {
     if (y.srcElement.hasAttribute("data-edit")){
         let index = y.srcElement.getAttribute("data-edit");
-        update.selectData(index, response.data);
-        tampilData(response.data);
-        
+        update.selectData(index);
+
+        // console.log(index);
     }
    }
    catch (e) {
@@ -77,8 +77,7 @@ parrentEdit.addEventListener("click", (y) => {
 
 let btnUbah = document.getElementById('btnUbah');
     btnUbah.addEventListener("click", () => {
-        update.ubahData(response.data);
-        tampilData(response.data);
+        update.ubahData();
     });
 
     
