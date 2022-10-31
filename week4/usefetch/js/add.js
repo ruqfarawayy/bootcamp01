@@ -1,4 +1,4 @@
-
+import * as tampil from './script.js';
 
 function simpan () {
     let nikInputObj = document.getElementById('tambahNik');
@@ -32,10 +32,9 @@ function simpan () {
         }
         );
         
-    // const response = await post.json();
-    // const userData = response.data;
-    // tambah.simpan(userData);
-    // tampil.tampilData(userData)
+    const response = await post.json();
+    const userData = response.data;
+    tampil.tampilData(userData)
     })();
 };
     

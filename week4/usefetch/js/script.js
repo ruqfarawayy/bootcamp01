@@ -12,7 +12,6 @@ import * as tampil from "./tampilData.js"
         tampil.tampilData(userData)
     }
     
-    loadData();
 //     .then(response => response.json())
 //     .then(response => {
 //         // console.log(response.data);
@@ -31,8 +30,8 @@ let btnSimpan = document.getElementById('btn-simpan');
 btnSimpan.addEventListener("click", () => {
     try {
     tambah.simpan();
-    loadData();
     warn.alertWarn("Berhasil Menambahkan", "success");
+    loadData();
     }
     catch(e){
         console.log(e.message);
@@ -115,3 +114,4 @@ let sortDesc = document.getElementById('sortDataDesc');
 
 // localStorage.setItem('profiles', JSON.stringify([{nik: 2141312389, nama: "Ganda", age: 34}]));
 
+loadData();
