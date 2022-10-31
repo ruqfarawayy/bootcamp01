@@ -28,8 +28,8 @@ let btnSimpan = document.getElementById('btn-simpan');
 btnSimpan.addEventListener("click", () => {
     try {
     tambah.simpan();
-    tampil.tampilData();
-    console.log('harusnya udah tampil');
+    // tampil.tampilData();
+    // console.log('harusnya udah tampil');
     warn.alertWarn("Berhasil Menambahkan", "success");
     }
     catch(e){

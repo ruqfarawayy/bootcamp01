@@ -34,7 +34,7 @@ function simpan () {
         
     const response = await post.json();
     const userData = response.data;
-    // tampil.tampilData(userData);
+    tampil.tampilData(userData);
 })();
 };
     
