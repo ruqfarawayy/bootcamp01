@@ -4,24 +4,34 @@ import * as hapus from "./delete.js";
 import * as update from "./update.js";
 import * as warn from "./alert.js";
 import * as tampil from "./tampilData.js"
-
-try {
-    fetch('./dataProfiles/profiles.json')
-    .then(response => response.json())
-    .then(data => {
-        tampil.tampilData(data.profiles);
-    });
-} catch (e){
-    console.log(e);
-}
-// console.log(data.profiles);
+ 
+    async function loadData() {
+        const url = await fetch('http://104.248.154.192:3005/person');
+        const response = await url.json();
+        const userData = response.data;
+        tampil.tampilData(userData)
+    }
+    
+    loadData();
+//     .then(response => response.json())
+//     .then(response => {
+//         // console.log(response.data);
+//         tampil.tampilData(response.data);
+//     });
+// // } catch (e){
+//     console.log(e);
+// }
+// console.log(response.data);
 
 // JSON.parse(localStorage.getItem('profiles'));
+
+
+
 let btnSimpan = document.getElementById('btn-simpan');
 btnSimpan.addEventListener("click", () => {
     try {
-    tambah.simpan(data.profiles);
-    tampilData(data.profiles);
+    tambah.simpan();
+    loadData();
     warn.alertWarn("Berhasil Menambahkan", "success");
     }
     catch(e){
@@ -42,8 +52,8 @@ parrentDel.addEventListener("click", (e) => {
    try {
     if (e.srcElement.hasAttribute("data-del")){
         let id = e.srcElement.getAttribute("data-del");
-        hapus.delData(id, data.profiles);
-        tampilData(data.profiles);
+        hapus.delData(id, response.data);
+        tampilData(response.data);
         warn.alertWarn("Berhasil Menghapus", "danger");
     };
    }
@@ -57,8 +67,8 @@ parrentEdit.addEventListener("click", (y) => {
    try {
     if (y.srcElement.hasAttribute("data-edit")){
         let index = y.srcElement.getAttribute("data-edit");
-        update.selectData(index, data.profiles);
-        tampilData(data.profiles);
+        update.selectData(index, response.data);
+        tampilData(response.data);
         
     }
    }
@@ -69,25 +79,25 @@ parrentEdit.addEventListener("click", (y) => {
 
 let btnUbah = document.getElementById('btnUbah');
     btnUbah.addEventListener("click", () => {
-        update.ubahData(data.profiles);
-        tampilData(data.profiles);
+        update.ubahData(response.data);
+        tampilData(response.data);
     });
 
     
 let sortAscend = document.getElementById('sortDataAscend');
     sortAscend.addEventListener("click", ()=> {
-        let sortedAsc = data.profiles.sort((a,b) => a.nik - b.nik);
+        let sortedAsc = response.data.sort((a,b) => a.nik - b.nik);
         tampilData(sortedAsc);
-        // sort.sortArr("sortDataAscend", data.profiles);
-        // tampilData(data.profiles);
+        // sort.sortArr("sortDataAscend", response.data);
+        // tampilData(response.data);
     });
 
 let sortDesc = document.getElementById('sortDataDesc');
     sortDesc.addEventListener("click", () => {
-        let sortedDesc = data.profiles.sort((a,b) => b.nik - a.nik);
+        let sortedDesc = response.data.sort((a,b) => b.nik - a.nik);
         tampilData(sortedDesc);
-        // sort.sortArr("sortDataDesc", data.profiles);
-        // tampilData(data.profiles);
+        // sort.sortArr("sortDataDesc", response.data);
+        // tampilData(response.data);
     })
 // let btnDelete = document.querySelectorAll('.btnDel');
 // btnDelete.addEventListener("click", (e) => {
@@ -104,3 +114,4 @@ let sortDesc = document.getElementById('sortDataDesc');
 // });
 
 // localStorage.setItem('profiles', JSON.stringify([{nik: 2141312389, nama: "Ganda", age: 34}]));
+

@@ -75,3 +75,6 @@ response (method)
  - formData()
  - json()
  - text()
+
+
+IP TUGAS : http://104.248.154.192:3005/person

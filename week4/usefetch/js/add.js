@@ -1,19 +1,42 @@
 
 
-function simpan (profiles) {
-    let nikInput = document.getElementById('tambahNik');
-    let namaInput = document.getElementById('tambahNama');
-    let ageInput = document.getElementById('tambahUsia');
+function simpan () {
+    let nikInputObj = document.getElementById('tambahNik');
+    let namaInputObj = document.getElementById('tambahNama');
+    let addressInputObj = document.getElementById('tambahAlamat');
 
-   profiles.push({
-        nik:nikInput.value,
-        nama:namaInput.value,
-        age: parseInt(ageInput.value),
-    });
+    let nikInput = nikInputObj.value;
+    let namaInput = namaInputObj.value;
+    let addressInput = addressInputObj.value;
 
-    nikInput.value = '';
-    namaInput.value = '';
-    ageInput.value = '';
+
+//    profiles.push({
+//         nik:nikInput.value,
+//         nama:namaInput.value,
+//         alamat:addressInput.value,
+//     });
+
+    nikInputObj.value = '';
+    namaInputObj.value = '';
+    addressInputObj.value = '';
+
+    (async () => {
+        const post = await fetch('http://104.248.154.192:3005/person',
+        {
+            method: 'POST',
+            headers: {
+                'Accept':'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({nik: nikInput, nama: namaInput, alamat: addressInput})
+        }
+        );
+        
+    // const response = await post.json();
+    // const userData = response.data;
+    // tambah.simpan(userData);
+    // tampil.tampilData(userData)
+    })();
 };
     
 export {simpan};
