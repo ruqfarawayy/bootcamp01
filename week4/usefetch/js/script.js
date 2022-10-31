@@ -50,9 +50,9 @@ parrentDel.addEventListener("click", (e) => {
    try {
     if (e.srcElement.hasAttribute("data-del")){
         let id = e.srcElement.getAttribute("data-del");
-        hapus.delData(id, response.data);
-        tampilData(response.data);
-        warn.alertWarn("Berhasil Menghapus", "danger");
+        // console.log(id)
+        hapus.delData(id);
+        warn.alertWarn("Berhasil Menghapus", "success");
     };
    }
    catch (e) {
