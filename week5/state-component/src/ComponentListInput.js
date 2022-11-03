@@ -23,8 +23,8 @@ const ComponentListInput = () => {
     return (
     <div key={index}>
      {item}
-     {/* <button onClick={() => { return handleRemoveInput(index);
-     }}> X </button> */}
+     <button onClick={() => { return handleRemoveInput(index);
+     }}> X </button>
      </div>
     );
    })}
