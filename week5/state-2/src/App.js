@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 
 function App() {
@@ -9,6 +9,8 @@ function App() {
   });
   const [dataWarga, setDataWarga] = useState([]);
   const [editIndex, setEditIndex] = useState(undefined);
+
+
   const handleInput = (e) => {
     setDataInput((prev) => ({
       ...prev,
@@ -60,6 +62,17 @@ function App() {
       </tr>
     );
   };
+
+  useEffect(() => {
+    setDataWarga([
+      {
+        nik: '1242511',
+        nama: 'Faruq',
+        umur: '21',
+    }
+    ])
+  },[]);
+
   const DataWarga = (props) => {
     return (
       <div>
@@ -106,6 +119,9 @@ function App() {
       editIndex !== undefined ? <b style={{backgroundColor: "yellow"}}>Lagi di Edit</b> : <b style={{backgroundColor: "green"}}>Bisa di Edit</b>
     }
       </form>
+
+      
+
       <DataWarga>
         {dataWarga.map((item, i) => (
           <RowTable
