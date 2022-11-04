@@ -17,9 +17,9 @@ function App() {
   };
   const handleEdit = (i) => {
     setDataInput(dataWarga[i]);
-    setEditIndex(i);
-  };
-
+      setEditIndex(i);
+    };
+    
   const handleSubmit = (e) => {
     if (editIndex !== undefined) {
       setDataWarga((prev) => {
@@ -33,6 +33,7 @@ function App() {
       });
     }
 
+   
     setDataInput({
       nama: "",
       nik: "",
@@ -48,7 +49,7 @@ function App() {
   };
   const RowTable = (props) => {
     return (
-      <tr>
+      <tr style={props.warna}>
         <td>{props.nik}</td>
         <td>{props.nama}</td>
         <td>{props.umur}</td>
@@ -101,10 +102,14 @@ function App() {
           onChange={handleInput}
         />
         <input type="submit" value="Submit" />
+        {
+      editIndex !== undefined ? <b style={{backgroundColor: "yellow"}}>Lagi di Edit</b> : <b style={{backgroundColor: "green"}}>Bisa di Edit</b>
+    }
       </form>
       <DataWarga>
         {dataWarga.map((item, i) => (
           <RowTable
+            warna={i % 2 == 0 ? {backgroundColor: "#DBDBDB"} : {backgroundColor: "white"}}
             key={i}
             nik={item.nik}
             nama={item.nama}
