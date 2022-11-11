@@ -82,22 +82,7 @@ const App2 = () => {
     setDaftarBuku((prev) => prev.filter((item, i) => i !== e));
   };
 
-  // const daftarBuku = [
-  //   {
-  //     judulBuku: "Hujan",
-  //     penulis: "Tere Liye",
-  //     tahun: 2016,
-  //     jumlahHal: 514,
-  //     rak: "76 A",
-  //   },
-  //   {
-  //     judulBuku: "Hello Salma!",
-  //     penulis: "Farhan Kebab",
-  //     tahun: 2022,
-  //     jumlahHal: 234,
-  //     rak: "9 C",
-  //   },
-  // ];
+
   return (
     <div>
       <form onSubmit={handleSubmit}>

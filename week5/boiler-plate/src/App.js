@@ -1,25 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment, useEffect } from 'react'
+import RouteService from '@/src/routes/RouteService'
+import ApiService from '@/src/services/client'
+import './App.css'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+/**
+ * configurasi environment development dan production
+ */
+// const isDevMode = ['development'].includes(process.env.NODE_ENV)
+
+// if (isDevMode) {
+// 	require('./services/mock-adapter')
+// }
+
+// ApiService.interceptors.response.use(
+// 	(response) => {
+// 		const isInvalidToken = false
+// 		if (isInvalidToken) {
+// 			// do when token invalid
+// 		}
+// 		return Promise.resolve(response)
+// 	},
+// 	(error) => {
+// 		console.error('interceptor * ', error.response)
+// 		return Promise.reject(error)
+// 	}
+// )
+// ApiService.interceptors.request.use(
+// 	(config) => {
+// 		return config
+// 	},
+// 	(error) => {
+// 		console.error('interceptor * ', error.response)
+// 		return Promise.reject(error)
+// 	}
+// )
+const App = () => {
+	return (
+		<Fragment>
+			<RouteService />
+		</Fragment>
+	)
 }
 
-export default App;
+export default App

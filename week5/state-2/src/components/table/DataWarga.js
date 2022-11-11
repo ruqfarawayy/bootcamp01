@@ -47,15 +47,15 @@ const DataWarga = () => {
     });
   };
 
-  // useEffect(() => {
-  //   setDataWarga([
-  //     {
-  //       nik: "1242511",
-  //       nama: "Faruq",
-  //       umur: "21",
-  //     },
-  //   ]);
-  // }, []);
+  useEffect(() => {
+    setDataWarga([
+      {
+        nik: "1242511",
+        nama: "Faruq",
+        umur: "21",
+      },
+    ]);
+  }, []);
   return (
     <form onSubmit={handleSubmit}>
       <label>NIK</label>
