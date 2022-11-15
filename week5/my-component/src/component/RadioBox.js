@@ -1,19 +1,33 @@
 import React from "react";
-const RadioBox = () => {
+const RadioBox = ({
+  name,
+  value,
+  onChange,
+  handleClick,
+  disabled,
+  placeholder,
+  readOnly,
+  label,
+  optionData,
+  ...props
+}) => {
   return (
     <div>
-     <label>Pilih Bahasa Favoritmu :</label>
-      <input type="radio" id="html" name="fav_language" value="HTML" />
-      <label>HTML</label>
-      <input type="radio" id="css" name="fav_language" value="CSS" />
-      <label>CSS</label>
-      <input
-        type="radio"
-        id="javascript"
-        name="fav_language"
-        value="JavaScript"
-      />
-      <label>JavaScript</label>
+      <label>{label}</label>
+      {optionData.map((item, i) => {
+          return (
+            <>
+            <input 
+              key={i} 
+              name={name}
+              type="radio"
+              onChange={onChange}
+              value={item.value}
+              {...props}/>
+              <label>{item.label}</label>
+          </>
+          );
+        })}
     </div>
   );
 };

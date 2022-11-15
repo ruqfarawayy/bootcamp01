@@ -21,12 +21,13 @@ const InputPwd = ({
   
   return (
     <div class="input-group">
-      <label class="label">Masukan Password</label>
+      <label class="label">{label}</label>
       <input
-        name="Password"
+        name={name}
         id="Password"
         class="input"
         placeholder={placeholder}
+        onChange={onChange}
         type={passwordShown ? "text" : "password"}
       ></input>
       <br/>

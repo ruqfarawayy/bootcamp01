@@ -10,6 +10,7 @@ const Home = lazy(() => import('../pages/Home'))
 const Login = lazy(() => import('../pages/Login'))
 const Profile = lazy(() => import('../pages/Profile'))
 const DataWarga = lazy(() => import('../pages/DataWarga'))
+const DetailDataWarga = lazy(() => import('../pages/DetailDataWarga'))
 
 const RouteStacks = () => {
 	const loggedIn = () => {

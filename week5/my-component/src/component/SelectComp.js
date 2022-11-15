@@ -1,11 +1,27 @@
 import React from "react";
-const SelectComp = () => {
+const SelectComp = ({
+  name,
+  value,
+  onChange,
+  handleClick,
+  disabled,
+  placeholder,
+  readOnly,
+  label,
+  optionData,
+  ...props
+}) => {
   return (
     <div>
-      <label>Choose your gender:</label>
-      <select name="gender" id="gender">
-        <option value="male">male</option>
-        <option value="female">female</option>
+      <label>{label}</label>
+      <select name={name} value={value} onChange={onChange} {...props}>
+        {optionData.map((item, i) => {
+          return (
+            <option key={`buat-drop-${i}`} value={item.value} >
+              {item.label}
+            </option>
+          );
+        })}
       </select>
     </div>
   );

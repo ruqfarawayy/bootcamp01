@@ -12,13 +12,14 @@ const InputText = ({
 }) => {
   
   return (
-    <div class="input-group">
-      <label class="label">{label}</label>
+    <div className="input-group">
+      <label className="label">{label}</label>
       <input
         id="text"
-        class="input"
+        className="input"
         type="text"
-        name={value}
+        name={name}
+        value={value}
         placeholder={placeholder}
         onChange={onChange}
         readOnly={readOnly}

@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
 import InputText from './component/InputText';
@@ -22,7 +21,7 @@ function App() {
     email: "",
     password: "",
     bahasa: "",
-    kelamin: "",
+    gender: "",
     policy: "",
     tanggal: "",
     waktu: "",
@@ -31,9 +30,20 @@ function App() {
   });
 
   const [editIndex, setEditIndex] = useState(undefined);
+  
+  const bahasa = [
+    { label: "Inggris", value: "inggris" },
+    { label: "Indonesia", value: "indonesia" },
+    { label: "Jepang", value: "Jepang" },
+    { label: "Rusia", value: "Rusia" },
+  ];
 
+  const gender = [
+    { label: "Laki-Laki", value: "Laki-Laki" },
+    { label: "Wanita", value: "Wanita" },
+  ]
   const handleDataInput = (e) => {
-    console.log(e.target.value);
+    // console.log(e.target.value);
     setDataInput((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
@@ -59,7 +69,7 @@ function App() {
       email: "",
       password: "",
       bahasa: "",
-      kelamin: "",
+      gender: "",
       policy: "",
       tanggal: "",
       waktu: "",
@@ -68,7 +78,13 @@ function App() {
     setEditIndex(undefined);
     e.preventDefault();
   };
-
+  // const handleSelect = (e) => {
+  //   console.log(e)
+  //   setDataInput((prev) => ({
+  //     ...prev,
+  //     [e.target.name]: e.target.value,
+  //   }));
+  // }
   const handleEdit = (e) => {
     console.log("editing");
     setEditIndex(e);
@@ -99,12 +115,12 @@ function App() {
         value={dataInput.nama}
         disabled={disabled}
         onChange={handleDataInput}
-        placeholder="Nama"
+        placeholder="Nama Panjang"
         readOnly={readOnly}
         />
         <InputNumber
         label="Masukan NIK"
-        name="nama"
+        name="nik"
         value={dataInput.nik}
         disabled={disabled}
         onChange={handleDataInput}
@@ -112,22 +128,41 @@ function App() {
         readOnly={readOnly}/>
         <InputMail
         label="Masukan Email"
-        name="Email"
+        name="email"
         value={dataInput.email}
         disabled={disabled}
         onChange={handleDataInput}
         placeholder="Email"
         readOnly={readOnly}/>
         <InputPwd
+        label="Masukkan Password"
+        name="password"
+        value={dataInput.password}
+        onChange={handleDataInput}
         placeholder="Password"
         />
-        <SelectComp/>
-        <RadioBox/>
+        <SelectComp
+        optionData= {bahasa}
+        label="Pilih Bahasa : "
+        name="bahasa"
+        value={dataInput.bahasa}
+        // onChange={handleDataInput}
+        onChange={handleDataInput}
+        // placeholder="Password"
+        />
+        <RadioBox
+        optionData={gender}
+        label="Pilih Jenis Kelamin : "
+        name="gender"
+        value={dataInput.gender}
+        onChange={handleDataInput}
+        />
         <CheckBox/>
         <InputDate/>
         <InputTime/>
         <InputRange/>
-        <ButtonCLick />
+        <ButtonCLick 
+        onClick={handleSubmit}/>
     </div>
   );
 }
