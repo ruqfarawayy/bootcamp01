@@ -23,16 +23,7 @@ const Login = () => {
     }));
   };
 
-  // const authLogin = () => {
-  //   if (
-  //     dataInput.username === datas.username &&
-  //     dataInput.password === datas.password
-  //   ) {
-      
-  //   } else {
-  //     alert("heee lahhhh");
-  //   }
-  // };
+  
   const onFinish = (values) => {
     const { username, password } = form.getFieldsValue();
     ApiService.request({
