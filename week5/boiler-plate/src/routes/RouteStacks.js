@@ -11,6 +11,7 @@ const Login = lazy(() => import('../pages/Login'))
 const Profile = lazy(() => import('../pages/Profile'))
 const DataWarga = lazy(() => import('../pages/DataWarga'))
 const DetailDataWarga = lazy(() => import('../pages/DetailDataWarga'))
+const Register = lazy(() => import('../pages/Register'))
 
 const RouteStacks = () => {
 	const loggedIn = () => {
@@ -51,10 +52,26 @@ const RouteStacks = () => {
 				}
 			/>
 			<Route
+				path={URLS.REGISTER}
+				element={
+					<PrivateRoute path={URLS.REGISTER} allow={[loggedOut]} navigateTo={URLS.PROFILE}>
+						<Register />
+					</PrivateRoute>
+				}
+			/>
+			<Route
 				path={URLS.DATAWARGA}
 				element={
 					<PrivateRoute path={URLS.DATAWARGA} allow={[loggedIn]} navigateTo={URLS.LOGIN}>
 						<DataWarga />
+					</PrivateRoute>
+				}
+			/>
+			<Route
+				path={`${URLS.DATAWARGA}/:userId`}
+				element={
+					<PrivateRoute path={`${URLS.DATAWARGA}/:userId`}allow={[loggedIn]} navigateTo={URLS.LOGIN}>
+						<DetailDataWarga />
 					</PrivateRoute>
 				}
 			/>

@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import URLS from '@/src/enums/urls'
 
 const Profile = () => {
@@ -13,7 +13,7 @@ const Profile = () => {
 		<div style={styles.container}>
 			<h1>Profile</h1>
 			<p>Silahkan melihat data penduduk kami</p>
-			<button>Data Penduduk Kongoria</button>
+			<button><Link to={URLS.DATAWARGA}>Data Warga Kongoria</Link></button>
 			<button onClick={authLogout}>logout</button>
 		</div>
 	)

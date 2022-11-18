@@ -8,6 +8,8 @@ const URLS = {
 	// auth
 	PROFILE: '/profile',
 	//auth
-	DATAWARGA: '/data-warga'
+	DATAWARGA: '/data-warga',
+	//auth
+	REGISTER: '/register'
 }
 export default URLS
