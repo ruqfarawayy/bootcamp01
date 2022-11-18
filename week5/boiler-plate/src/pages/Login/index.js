@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import URLS from "@/src/enums/urls";
-
 import { Card, Button, Checkbox, Form, Input } from "antd";
 import ApiService from "@/src/services/clientBlog";
 
@@ -24,35 +23,43 @@ const Login = () => {
     }));
   };
 
-  const authLogin = () => {
-    if (dataInput.username === datas.username && dataInput.password === datas.password) {
-      localStorage.setItem("token", "hehehehe");
-      setTimeout(() => {
-        navigate(URLS.PROFILE);
-      }, 2000);
-    } else {
-      alert("heee lahhhh");
-    }
-  };
+  // const authLogin = () => {
+  //   if (
+  //     dataInput.username === datas.username &&
+  //     dataInput.password === datas.password
+  //   ) {
+      
+  //   } else {
+  //     alert("heee lahhhh");
+  //   }
+  // };
   const onFinish = (values) => {
     const { username, password } = form.getFieldsValue();
     ApiService.request({
       method: "post",
-      url: "/login",
+      url: "auth/login",
       data: {
         username,
         password,
       },
-    }).then((res) => {
-      console.log(res);
-    });
+    })
+      .then((res) => {
+        // console.log(res.data.data.token)
+        localStorage.setItem("token", res.data.data.token);
+      setTimeout(() => {
+        navigate(URLS.PROFILE);
+      }, 2000);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
 
     console.log("Success:", values);
   };
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
   };
- 
+
   return (
     <div
       style={{
