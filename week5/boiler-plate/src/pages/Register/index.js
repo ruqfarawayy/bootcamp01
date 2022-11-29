@@ -3,6 +3,7 @@ import { useState } from "react";
 import URLS from "@/src/enums/urls";
 import ApiService from "@/src/services/clientBlog";
 import { Button, Card, Form, Input, Checkbox, message } from "antd";
+import API_URLS from "@/src/enums/api-urls";
 
 const { useForm } = Form;
 const Register = () => {
@@ -13,7 +14,7 @@ const Register = () => {
     const { name, username, password } = form.getFieldsValue();
     ApiService.request({
       method: "post",
-      url: "auth/register",
+      url: API_URLS.AUTH_REGISTER,
       data: {
         name,
         username,

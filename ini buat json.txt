@@ -1,0 +1,152 @@
+{
+	"[dart]": {
+		"editor.formatOnSave": true,
+		"editor.formatOnType": true,
+		"editor.rulers": [80],
+		"editor.selectionHighlight": false,
+		"editor.suggest.snippetsPreventQuickSuggestions": false,
+		"editor.suggestSelection": "first",
+		"editor.tabCompletion": "onlySnippets",
+		"editor.wordBasedSuggestions": false
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features"
+	},
+	"[vue]": {
+		"editor.defaultFormatter": "octref.vetur"
+	},
+	"compareFolders.excludeFilter": [
+
+		"**/node_modules", "**/dist", "**/.svn", "**/.git", "**/package-lock.json"
+	],
+	"editor.autoClosingQuotes": "always",
+	"editor.cursorBlinking": "phase",
+	"editor.cursorSmoothCaretAnimation": true,
+	"editor.cursorWidth": 3,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.fontFamily": "'Dank Mono', 'monospace'",
+	"editor.fontLigatures": true,
+	"editor.fontSize": 16,
+	"editor.fontWeight": 600,
+	"editor.lineHeight": 36,
+	"editor.minimap.side": "left",
+	"editor.mouseWheelZoom": true,
+	"editor.quickSuggestions": {
+		"comments": false,
+		"other": true,
+		"strings": true
+	},
+	"editor.renderControlCharacters": false,
+	"editor.renderFinalNewline": false,
+	"editor.smoothScrolling": true,
+	"editor.stablePeek": true,
+	"editor.suggestSelection": "first",
+	"editor.tabCompletion": "onlySnippets",
+	"editor.tokenColorCustomizations": {
+
+		"textMateRules": [
+			{
+				"scope": [
+					"comment",
+					"entity.name.type.class",
+					"keyword",
+					"constant",
+					"storage.modifier",
+					"storage.type.class.js"
+				],
+				"settings": {
+					"fontStyle": "italic"
+				}
+			}, {
+				"scope": [
+					"invalid",
+					"keyword.operator",
+					"constant.numeric.css",
+					"keyword.other.unit.px.css",
+					"constant.numeric.decimal.js",
+					"constant.numeric.json"
+				],
+				"settings": {
+					"fontStyle": ""
+				}
+			}
+		]
+	},
+	"files.autoSave": "onFocusChange",
+	"files.exclude": {
+		"**.svg": true,
+		"**/build": true,
+		"**/dist": true,
+		"**/node_modules": true,
+		"**/package-lock.json": true,
+		"**/yarn.lock": true
+	},
+	"files.watcherExclude": {
+		"**/build/**": true
+	},
+	"git.autofetch": true,
+	"git.enableSmartCommit": true,
+	"javascript.updateImportsOnFileMove.enabled": "always",
+	"search.exclude": {
+		"**/build": true
+	},
+	"window.title": "${dirty}${activeEditorShort}${separator}${rootName}",
+	"window.titleBarStyle": "custom",
+	"workbench.editor.highlightModifiedTabs": true,
+ "Workbench.editor.scrollToSwitchTabs": true,
+	"workbench.fontAliasing": "auto",
+	"workbench.list.smoothScrolling": true,
+	"vetur.format.options.tabSize": 2,
+	"vetur.format.options.useTabs": true,
+	"vetur.format.options.trailingComma": false,
+	"vetur.format.options.semi": false,
+	"[json]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
+	},
+	"workbench.editor.enablePreview": false,
+	"editor.bracketPairColorization.enabled": true,
+	"editor.hover.delay": 1200,
+	"editor.letterSpacing": 0.6,
+	"diffEditor.codeLens": true,
+	"editor.tabSize": 1,
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	"notebook.outline.showCodeCells": true,
+	"gitlens.defaultDateFormat": "DD MMM, YYYY",
+	"security.workspace.trust.banner": "always",
+	"cSpell.userWords": [
+		"Antd",
+		"bulan",
+		"COOLDOWN",
+		"Kuota",
+		"Rekening",
+		"tahun",
+		"vuex"
+	],
+	"workbench.layoutControl.enabled": false,
+	"diffEditor.ignoreTrimWhitespace": false,
+    "compareFolders.ignoreEmptyLines": true,
+	"editor.accessibilitySupport": "off",
+	"editor.lightbulb.enabled": false,
+	"editor.guides.bracketPairs": true,
+	"editor.suggest.showUsers": false,
+	"workbench.tips.enabled": false,
+	"editor.suggest.showInterfaces": false,
+	"editor.suggest.showStructs": false,
+	"editor.suggest.showUnits": false,
+	"editor.suggest.showKeywords": false,
+	"editor.suggest.showIssues": false,
+	"editor.suggest.showInlineDetails": false,
+	"editor.suggest.showIcons": false,
+	"editor.suggest.showCustomcolors": false,
+	"editor.suggest.showEnumMembers": false,
+	"editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+	"terminal.integrated.fontFamily": "monospace",
+	"editor.minimap.enabled": false,
+	"http.proxyAuthorization": null,
+	"editor.codeActionsOnSave": {
+	
+	},
+}

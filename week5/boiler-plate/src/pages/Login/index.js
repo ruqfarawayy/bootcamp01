@@ -3,6 +3,7 @@ import { useState } from "react";
 import URLS from "@/src/enums/urls";
 import { Card, Button, Checkbox, Form, Input } from "antd";
 import ApiService from "@/src/services/clientBlog";
+import API_URLS from "@/src/enums/api-urls";
 
 const { useForm } = Form;
 const Login = () => {
@@ -28,7 +29,7 @@ const Login = () => {
     const { username, password } = form.getFieldsValue();
     ApiService.request({
       method: "post",
-      url: "auth/login",
+      url: API_URLS.AUTH_LOGIN,
       data: {
         username,
         password,

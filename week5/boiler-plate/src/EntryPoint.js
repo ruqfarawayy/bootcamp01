@@ -5,6 +5,7 @@ import { Suspense } from 'react'
 // import { PersistGate } from 'redux-persist/integration/react'
 import App from '@/src/App'
 import Loader from '@/src/components/Loader'
+require ("./services/mock-adapter")
 // import releaseVersion from '@/src/release_version.json'
 
 // window.getBuildInfo = () => {
