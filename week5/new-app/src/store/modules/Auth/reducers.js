@@ -10,20 +10,7 @@ export default createReducer(initialState, {
 	[REDUCER_TYPES.AUTH_LOGIN](state, { type, ...payload }) {
 		return objectMerge(state, 'login', payload)
 	},
-
-	[REDUCER_TYPES.AUTH_REGISTER](state, { type, ...payload }) {
-		return objectMerge(state, 'register', payload)
-	},
-
-	[REDUCER_TYPES.AUTH_FORGOT](state, { type, ...payload }) {
-		return objectMerge(state, 'forgot', payload)
-	},
-
-	[REDUCER_TYPES.AUTH_RESET](state, { type, ...payload }) {
-		return objectMerge(state, 'reset', payload)
-	},
-
-	[REDUCER_TYPES.AUTH_LOGOUT](state, action) {
-		return set('login.token', '', state)
+	[REDUCER_TYPES.AUTH_LOGOUT](state, { type }) {
+		return set(state, 'login.data', {})
 	}
 })

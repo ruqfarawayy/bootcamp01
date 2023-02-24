@@ -7,6 +7,7 @@
  */
  const REDUCER_TYPES = {
   AUTH_LOGIN : 'AUTH_LOGIN',
+  AUTH_LOGOUT : 'AUTH_LOGOUT'
  }
  
  export default REDUCER_TYPES
